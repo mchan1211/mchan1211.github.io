@@ -1,0 +1,77 @@
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+@font-face {
+  font-family: myFirstFont;
+  src: url(fonts/Montserrat-Medium.ttf);
+  color:black;
+}
+
+div {
+font-family: MyFirstFont;
+color:black;
+}
+
+html, body {
+	font-family: 'myFirstFont';
+	src: url(fonts/Montserrat-Medium.ttf);
+	color:#a37f7f;
+	margin:20px;
+	padding:0px;
+	height:100%;
+}
+a{
+	color: black;
+
+}
+
+
+html {
+		/* Standard text-settings below */
+	font-size: 1em;
+    line-height: 1.4em;
+}
+
+
+
+
+body {
+	font-family: MyFirstFont; sans-serif;
+	background: #967160;
+	color: black
+	
+}
+header,footer {
+	@font-face
+	font-family: 'mySecondFont';
+	src: url(fonts/Montserrat-Bold.ttf);
+	font-size:20px;
+	color:#735151;
+	
+}
+
+
+div#container {
+	border: 1px solid black;
+	border-style: groove;
+	border-width: 10px;
+	border-color: white;
+	width: 1200px;
+	margin: auto;
+	padding: 10px;
+	background: #f7c6c6;
+
+}
+
+
+img {
+	src:url(img/idk.png);
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 5px;
+  border-color: white;
+  margin: auto;
+
+
+
+
+
+

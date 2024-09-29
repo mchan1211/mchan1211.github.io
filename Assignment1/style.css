@@ -1,0 +1,73 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url(fonts/Montserrat-Medium.ttf);
+}
+
+div {
+  font-family: myFirstFont;
+}/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html, body {
+	margin:0px;
+	padding:0px;
+	height:100%;
+}
+
+html {
+		/* Standard text-settings below */
+	font-size: 1em;
+    line-height: 1.4em;
+}
+
+
+
+
+body {
+	font-family: myFirstFont; sans-serif;
+	background: #574d56;
+	color: rgba(20,0,100,10)
+}
+
+
+div#container {
+	border: 1px solid black;
+	border-style: double;
+	border-width: 8px;
+	width: 1000px;
+	margin: auto;
+	padding: 20px;
+	background: #B2FC08;
+}
+
+header{
+	font-family: 'myFirstFont';
+	background-color: #557FD9;
+	border-style: double;
+	border-width: 8px;
+border-color:#B2FC08;
+
+
+
+
+
+}
+footer{
+	font-size: 0.8em;
+	background-color: #5555D9;
+	border-style: double;
+	border-width: 8px;
+	border-color:#B2FC08;
+}
+
+
+
+header, footer {
+	padding: 20px;
+	margin: 10px;
+
+
+}
+p.quotes {
+	color: #7D4277;
+	text-shadow;
+	1px 1px 5px black;
+}
