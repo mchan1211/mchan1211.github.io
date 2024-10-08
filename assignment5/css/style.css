@@ -1,0 +1,159 @@
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+
+html, body {
+	
+}
+
+html {
+	
+}
+
+
+
+
+body {
+	height:100vh;
+	overflow:hidden;
+	background: linear-gradient(95deg, #fca9c5,#f5e7a4 );
+	font-family: Helvetica,sans-serif;
+	color:white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+
+.container {
+	width:350px ;
+	height:500px;
+	perspective: 600px;
+	}
+
+.container:hover > .card{
+	cursor: pointer;
+	transform:rotateY(180deg) rotateZ(-180deg);
+}
+
+.card{
+	height:100%;
+	width:100%;
+	position:relative;
+	transition: transform 1000ms;
+	transform-style: preserve-3d;
+}
+
+.front,
+.back {
+	height:100%;
+	width:100%;
+	border-radius: 2rem;
+	box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+	position: absolute;
+	backface-visibility: hidden;
+
+}
+
+.front{
+	font-size: 20px;
+	color: #3a3a3a;
+	background-color: white;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+
+align-items: center;
+gap:5rem;
+
+}
+
+.back{
+	background-color: #3a3a3a;
+	transform:rotateY(180deg) rotateZ(-180deg);
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+align-items: center;
+gap:5rem;
+}
+
+.box ul li{
+	position: relative;
+	display: inline-block;
+	width: 0;
+	height: 0;
+	margin-left:0.9em;
+	margin-right: 0.9em;
+	margin-right: 1.2em;
+	border-right: 0.3 solid transparent;
+    border-bottom: 0.7em solid white;
+    border-left:0.3em solid transparent;
+    list-style: none;
+    opacity: 0;
+    bottom: 0;
+    left:10vw;
+    animation: animate 15s linear infinite;
+}
+
+.box ul li::before,
+.box ul li::after{
+	position:absolute;
+	content:'';
+	display:block;
+	width: 0;
+	height: 0;
+	top:0.6em;
+	left:-1em;
+	border-right: 1em solid transparent;
+	border-bottom:0.7em solid white;
+	border-left:1em solid transparent;
+	transform: rotate(-35deg);
+}
+
+.box ul li::after{
+	transform:rotate(35deg);
+
+}
+.box ul li:nth-child(2){
+	left:36vw;
+	animation-delay: 2s;
+
+}
+.box ul li:nth-child(3){
+	left:22vw;
+	animation-delay: 4s;
+
+}
+.box ul li:nth-child(4){
+	left:56vw;
+	animation-delay: 6s;
+
+}
+.box ul li:nth-child(5){
+	left:76vw;
+	animation-delay: 4s;
+
+}
+
+@keyframes animate{
+	0%{
+		transform:scale(0) rotate(0);
+		opacity: 1;
+		bottom:0;
+	}
+	100%{
+		transform:scale(5) rotate(360deg);
+		opacity: 0;
+		bottom:100vh;
+	}
+}
+
+
+
