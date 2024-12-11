@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Say Yes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Heaven</h1>
+    </header>
+
+    <div class="content">
+        <p>Do you want to go to heaven?</p>
+        <button id="reveal-btn">Open the gates</button>
+    </div>
+
+    <!-- Hidden Content -->
+    <div class="hidden-content" id="content1">
+        <p><strong>If you dance, I'll dance
+And if you don't, I'll dance anyway
+Give peace a chance
+Let the fear you have fall away</strong> — Lana D Ray</p>
+    </div>
+
+    <div class="hidden-content" id="content2">
+       <iframe src="https://assets.pinterest.com/ext/embed.html?id=321444492168868763" height="434" width="345" frameborder="0" scrolling="no"></iframe>
+    </div>
+
+    <div class="hidden-content" id="content3">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/x9EoXWJ_cWM?si=RXiy0j0bF0qRPHoH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            console.log("Document is ready!");
+            let counter = 0;
+            const contents = ["#content1", "#content2", "#content3"];
+
+            
+            $(".hidden-content").hide();
+
+            $("#reveal-btn").click(function() {
+                console.log("Button clicked!");
+                if (counter < contents.length) {
+                    $(contents[counter]).fadeIn(500); 
+                    counter++;
+                } else {
+                    $(this).text("say yes")
+                           .prop("disabled", true)
+                           .css("background-color", "#aaa");
+                }
+            });
+        });
+    </script>
+</body>
+
+<footer>
+    Mary Chandara, 2024
+</footer>
+</html>
